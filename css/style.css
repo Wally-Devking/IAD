@@ -6,16 +6,16 @@
     --dark: #28282B;
     --brand: #ffd900;
     --black: #00000;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
 
 h1, h2, h3 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -34,7 +34,7 @@ p {
 }
 
 body {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -43,7 +43,7 @@ body {
 h1,
 h2,
 .fw-bold {
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
 h3,
@@ -61,7 +61,7 @@ h6,
 
 /*** Gradient Text & BG ***/
 .text-primary-gradient {
-    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    background:  var(--brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -157,15 +157,15 @@ h6,
     bottom: 45px;
     z-index: 99;
     border: none;
-    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    background: linear-gradient(to bottom right, var(--primary), var(--primary));
 }
 
 h1, h2, h3 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
 
@@ -173,11 +173,11 @@ p {
 .navbar-light .navbar-nav .nav-link {
     position: relative;
     margin-right: 25px;
-    padding: 45px 0;
-    font-family: 'Jost', sans-serif;
+    /* padding: 45px 0; */
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: var(--light) !important;
+    color: var(--dark) !important;
     outline: none;
     transition: .5s;
 }
@@ -193,6 +193,7 @@ p {
     border: 10px solid;
     border-color: var(--light) transparent transparent transparent;
     transition: .5s;
+    
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -214,7 +215,8 @@ p {
     transition: .5s;
 }
 
-.sticky-top.navbar-light .navbar-brand img {
+.sticky-top.
+-light .navbar-brand img {
     max-height: 45px;
 }
 
@@ -476,14 +478,15 @@ p {
     /* padding-top: 9rem; */
     background:
         url(../img/bg-circle.png),
-        url(../img/IADnet.png),
+        url(../img/pattern-BG.png) ,
         /* url(../img/IADnet.png), */
-        linear-gradient(to bottom right, var(--primary), var(--brand));
+        linear-gradient(to bottom right, var(--primary), var(--primary) );
     background-position:
         left 10px bottom 10px,
         right 0px top 10%,
         center top;
     background-repeat: no-repeat;
+
 }
 
 
@@ -517,7 +520,7 @@ p {
 .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Poppins";
     font-weight: 900;
     margin-right: 10px;
 
@@ -557,7 +560,7 @@ p {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 .button-container svg {
@@ -570,12 +573,12 @@ p {
 }
 
 .button {
-    color: #ef0707;
+    color: #ffd900;
     background-color: transparent;
     border: none;
-    padding: 10px 50px;
+    padding: 10px 15px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
     z-index: 2;
     position: relative;
     border-radius: 15px; /* Button with rounded corners */
@@ -633,9 +636,11 @@ p {
             cursor: pointer;
             border: none;
             background: none;
+            
         }
         .navbar-collapse {
             display: none; /* Hide by default */
+
         }
         .navbar-collapse.show {
             display: block; /* Show when toggled */
