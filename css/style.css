@@ -475,14 +475,12 @@ p {
 /*** Footer ***/
 .footer {
     /* margin-top: 6rem; */
-    /* padding-top: 9rem; */
+    padding-bottom: 1rem;
     background:
-        url(../img/bg-circle.png),
-        url(../img/pattern-BG.png) ,
-        /* url(../img/IADnet.png), */
+        /* url(../img/Pattern-BG.png), */
         linear-gradient(to bottom right, var(--primary), var(--primary) );
     background-position:
-        left 10px bottom 10px,
+        left 0  bottom 0px,
         right 0px top 10%,
         center top;
     background-repeat: no-repeat;

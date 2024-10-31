@@ -47,22 +47,56 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <div class="container-xxl bg-white p-0">
+
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+            <img src="img/Logo.png" alt="Loading..." style="width: 100px; height: auto;" />
         </div>
-        <!-- Spinner End -->
+        <style>
+     #spinner {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            z-index: 1050; /* Keeps it above other content */
+        }
+        
+        #spinner.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
 
+        </style>
+
+   <script>
+    window.addEventListener("load", function () {
+        document.getElementById("spinner").classList.add("fade-out");
+    });
+</script>
+
+        
+        <!-- Spinner End -->
 
    
         <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-2" style="background-color: white; padding-top: 8px; padding-bottom: 8px;">
+            <div class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-2" style="background-color: white; padding-top: 8px; padding-bottom: 8px;">
 
-                <a href="#" class="navbar-brand p-0">
-                    <img src="img/Logo.png" alt="Logo" style="width: 200px; height: auto;">
+                <a href="#home" class="navbar-brand p-0">
+                    <img src="img/Logo4.png" alt="Logo" style="width: 200px; height: auto;">
                 </a>
+
+
+            <style>
+
+
+/* Adjust logo size for smaller screens */
+@media (max-width: 767px) {
+    .navbar-brand img {
+        max-width: 150px; /* Decrease maximum width for smaller screens */
+    }
+}
+            </style>
+              
+        
+
                 
                 <button class="navbar-toggler" id="navbarToggler">
                  
@@ -73,13 +107,14 @@
                 <div class="navbar-collapse" id="navbarCollapse" >
                     <div class="navbar-nav mx-auto py-0">
                         <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#why-IAD" class="nav-item nav-link">Why IAD</a>
-                        <a href="#about" class="nav-item nav-link">About IAD</a>
+                        <a href="#why-IAD" class="nav-item nav-link">Who we are</a>
+                        <a href="#about" class="nav-item nav-link">About us</a>
                         <!-- <a href="#who-we-are" class="nav-item nav-link">Who We Are</a> -->
                         <a href="#hot" class="nav-item nav-link">Shop</a>
-                        <a href="#contact" class="nav-item nav-link">Contact Us</a>
+                        <a href="#contact" class="nav-item nav-link">Subscribe</a>
                     </div>
 
+                </div>
 
                     <!-- <div class="button-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
@@ -95,9 +130,9 @@
                             </g>
                         </svg>
                         <a href="#" class="button">Get Our Merch</a>
-                    </div>
-                </div> -->
+                    </div>-->
 
+                </div>
                 <script>
                     var navbarToggler = document.getElementById('navbarToggler');
                     var navbarCollapse = document.getElementById('navbarCollapse');
@@ -170,7 +205,7 @@
                         </div>
                         <div class="hero-content"style="margin-top: 180px">
                             <h1>Another world is possible</h1>
-                            <p>Your only choice is to be extraordinary</p>
+                            <!-- <p>Your only choice is to be extraordinary</p> -->
     
                             <div class="button-container" style="margin-top: 100px;  padding: 18px 20px;
 ">
@@ -187,7 +222,7 @@
                                     </g>
                                 </svg>
                                 <a href="#why-IAD" class="button" style=" margin-top: 100px; padding: 18px 20px; color: white;
-">Find Out Here</a>
+">Find out here</a>
                             </div>
                         </div>
                     </section>
@@ -203,7 +238,7 @@
                         </div>
                         <div class="hero-content"style="margin-top: 180px">
                             <h1>It’s #NoLimits SZN.</h1>
-                            <p>Why hold back?</p>
+                            <!-- <p>Why hold back?</p> -->
     
                             <div class="button-container" style="margin-top: 100px; padding: 18px 20px">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
@@ -219,7 +254,7 @@
                                     </g>
                                 </svg>
                                 <a href="#why-IAD" class="button" style=" margin-top: 100px; padding: 18px 20px; color: white;
-">Find Out Here</a>                            
+">Find out here</a>                            
                         </div>
                     </section>
                 </div>
@@ -234,7 +269,7 @@
                         </div>
                         <div class="hero-content"style="margin-top: 180px">
                             <h1>Everything you imagine is real</h1>
-                            <p>We will show you</p>
+                            <!-- <p>We will show you</p> -->
     
                             <div class="button-container" style="margin-top: 100px; padding: 18px 20px">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
@@ -250,7 +285,7 @@
                                     </g>
                                 </svg>
                                 <a href="#why-IAD" class="button" style=" margin-top: 100px; padding: 18px 20px; color: white;
-">Find Out Here</a>                            
+">Find out here</a>                            
                         </div>
                     </section>
                 </div>
@@ -281,7 +316,7 @@
                    <div class="container py-5 px-lg-5">
                        <div class="row g-5 align-items-center">
                            <div class="col-lg-6">
-                               <img class="img-fluid wow fadeInDown zoom-in-image" data-wow-delay="0.1s" src="img/Logo.png">
+                               <img class="img-fluid wow fadeInDown zoom-in-image" data-wow-delay="0.1s" src="img/Artboard1.jpg">
                            </div>
                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
                                <!-- <h5 class="text-primary-gradient fw-medium" >Who We Are!</h5> -->
@@ -305,7 +340,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <!-- <h2 class="text-primary-gradient fw-medium">About Us</h2> -->
-                        <h1 class="mb-4" style="color:white">Everything you imagine is real</h1>
+                        <h1 class="mb-4" style="color:white">We are the Culture.</h1>
                         <p class="mb-4" style="color: rgb(255, 255, 255)">
                             We are more than just a collective; we are a community of  like-minded individuals who share a passion for self-expression and originality.
                             </p>
@@ -333,7 +368,7 @@
                         <!-- <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a> -->
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/cloud.png">
+                        <img class="img-fluid wow fadeInUp; img-fluid wow fadeInDown zoom-in-image" data-wow-delay="0.5s" src="img/Artboard2.jpg">
                     </div>
                 </div>
             </div>
@@ -350,7 +385,7 @@
 <div class="container py-5 px-lg-5">
     <div class="row g-5 align-items-center">
         <div class="col-lg-6">
-            <img id="slidingImage" class="img-fluid" src="img/Group3.png">
+            <img id="slidingImage" class="img-fluid; img-fluid wow fadeInDown zoom-in-image" src="img/Artboard3.jpg">
         </div>
         <div class="col-lg-6" style="animation: fadeInUp 0.7s;">
             <h1 class="mb-4" style="color: black;">Real recognizes real. </h1>
@@ -466,7 +501,7 @@ window.addEventListener('scroll', handleScroll);
             <div class="container py-5 px-lg-5" id="hot">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <!-- <h5 class="text-primary-gradient fw-medium">What's Hot?</h5> -->
-                    <h1 class="mb-5" style="color:white">Shop</h1>
+                    <h1 class="mb-5" style="color:white">Imagine</h1>
                 </div>
             </div>
                 <div class="tab-content text-start">
@@ -476,7 +511,7 @@ window.addEventListener('scroll', handleScroll);
                             <div class="col-lg-3 col-md-6">
                                 <div class="glass-container rounded">
                                     <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Fashion</h4>
+                                        <!-- <h4 class="text-primary-gradient mb-1">Fashion</h4> -->
                                         <!-- <span>Coming Soon...</span> -->
                                     </div>
                 
@@ -513,7 +548,7 @@ window.addEventListener('scroll', handleScroll);
                             <div class="col-lg-3 col-md-6">
                                 <div class="glass-container rounded">
                                     <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1" >Partying</h4>
+                                        <!-- <h4 class="text-primary-gradient mb-1" >Partying</h4> -->
                                         <!-- <span>Coming Soon...</span> -->
                                     </div>
                 
@@ -547,7 +582,7 @@ window.addEventListener('scroll', handleScroll);
                             <div class="col-lg-3 col-md-6">
                                 <div class="glass-container rounded">
                                     <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Art Gallery</h4>
+                                        <!-- <h4 class="text-primary-gradient mb-1">Art Gallery</h4> -->
                                         <!-- <span>Coming Soon...</span> -->
                                     </div>
                 
@@ -586,7 +621,7 @@ window.addEventListener('scroll', handleScroll);
                             <div class="col-lg-3 col-md-6">
                                 <div class="glass-container rounded">
                                     <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Podcasting</h4>
+                                        <!-- <h4 class="text-primary-gradient mb-1">Podcasting</h4> -->
                                         <!-- <span>Coming Soon...</span> -->
                                     </div>
                 
@@ -635,6 +670,10 @@ window.addEventListener('scroll', handleScroll);
                     @media (max-width: 767px) { /* Target devices with width 767px or smaller */
                         #contact h1 {
                             font-size: 1.5rem; /* Smaller font size for mobile screens */
+                            padding: 0;
+                        }
+                        #contact p {
+                            padding: 0;
                         }
                     }
 
@@ -666,7 +705,7 @@ window.addEventListener('scroll', handleScroll);
                                                 </g>
                                             </svg>
                                             <div>
-                                                <button type="submit" class="button">Send Message</button>
+                                                <button type="submit" class="button">Stay connected</button>
                                             </div>
                                         </div>
                                     </div>
@@ -716,20 +755,20 @@ window.addEventListener('scroll', handleScroll);
             <div class="container py-5 px-lg-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
-                        <h4 class="text-white mb-4">Contact Us</h4>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 ***************</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+2340***********</p>
+                        <h4 class="text-white mb-4">Contact us</h4>
+                        <!-- <p><i class="fa fa-map-marker-alt me-3"></i>123 ***************</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+2340***********</p> -->
                         <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
+                        <div class="d-flex pt-0">
         
                        
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h4 class="text-white mb-4">Quick Link</h4>
-                        <a class="btn btn-link" href="#about">About</a>
-                        <a class="btn btn-link" href="#contact">Contact Us</a>
-                        <a class="btn btn-link" style="color: rgb(0, 0, 0);" href="#">Merch Store</a> 
+                        <a class="btn btn-link" href="#about">About us</a>
+                        <a class="btn btn-link" href="#contact">Contact us</a>
+                        <!-- <a class="btn btn-link" style="color: rgb(0, 0, 0);" href="#">Merch Store</a>  -->
 
                         <!-- <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
@@ -749,7 +788,7 @@ window.addEventListener('scroll', handleScroll);
                         <!-- <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a> -->
                         <!-- <a class="btn btn-link" href="">Career</a> -->
-                    </div>
+                    <!-- </div> -->
                     <!-- <div class="col-md-6 col-lg-3">
                         <h4 class="text-white mb-4">Newsletter</h4>
                         <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
@@ -760,11 +799,11 @@ window.addEventListener('scroll', handleScroll);
                     </div>
                 </div>
             </div> -->
-            <div class="container px-5">
+            <div class="container px-4">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-0">
-                            &copy; <a class="border-bottom" href="#">IAD - Imagine Another Dimension</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" style="font-size: small;" href="#">IAD - Imagine Another Dimension, All Right Reserved.</a> 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							<!-- Designed By <a class="border-bottom" href="#">WallyDev</a> -->
@@ -781,6 +820,7 @@ window.addEventListener('scroll', handleScroll);
                 </div>
             </div>
         </div>
+    </div>
         <!-- Footer End -->
 
 
