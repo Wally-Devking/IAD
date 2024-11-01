@@ -157,7 +157,7 @@ h6,
     bottom: 45px;
     z-index: 99;
     border: none;
-    background: linear-gradient(to bottom right, var(--primary), var(--primary));
+    background: linear-gradient(to bottom right, var(--brand), var(--brand));
 }
 
 h1, h2, h3 {
@@ -530,6 +530,7 @@ p {
 
 .footer .btn.btn-social:hover {
     color: var(--primary);
+    background-color: var(--brand);
 }
 
 .footer .btn.btn-link {
