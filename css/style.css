@@ -490,28 +490,18 @@ p {
     /* margin-top: 6rem; */
     padding-bottom: 1rem;
     background:
-        url(../img/Pattern-BG.png),
-        linear-gradient(to bottom right, var(--primary), var(--primary) );
+        url(../img/BG.png);
     background-position:
-        left 60rem  bottom -10px,
+        left 0rem  bottom 0px,
         right 0px top 0%,
         center top;
     background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire background */
+
     
 
 }
-@media (max-width: 768px) {
-    .footer {
-       center center;
-        background-size: 100%; /* Adjusts the image to fit better on small screens */
-        background-position:
-        left 15rem  bottom 10rem,
-        right 0px top 10%,
-        center top;
-    background-repeat: no-repeat;
-    }
-}
-    
+
 
 
 
