@@ -109,11 +109,7 @@
         
         <style>
             /* General Reset */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+       
         
             /* Hero Carousel Styles */
             #heroCarousel {
@@ -172,19 +168,18 @@
                 .mobile-image {
                     display: block;
                 }
-        
-                .carousel-caption {
-                    bottom: 5%;
-                    font-size: 1.2rem;
+                .hero-image {
+                    margin-top: -8rem;
+                    width: 100%;
+                    height: 100vh;
+                    object-fit: contain; /* Ensures the full image fits within the screen */
                 }
-        
-                .carousel-caption h2 {
-                    font-size: 1.5rem;
-                }
-        
-                .carousel-caption p {
-                    font-size: 1rem;
-                }
+                #heroCarousel {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 100vh;
+            }
             }
         </style>
         
@@ -230,6 +225,8 @@
 
         <style>
         /* Modal Styling */
+
+        
         #imageModal {
             display: none; 
             justify-content: center;
@@ -290,6 +287,17 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .containerss {
+  max-width: 100%;
+  margin: -15rem 0 -1rem 0;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 }
 
 h1, h2 {
@@ -483,27 +491,48 @@ h1, h2 {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-
+    
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const modal = document.getElementById("imageModal");
         const form = document.getElementById("subscribeForm");
 
-        // Check if user has already subscribed
+        // Check if the user has already subscribed
         if (!localStorage.getItem("subscribed")) {
             setTimeout(() => {
                 modal.style.display = "flex"; // Show modal after 3 seconds
             }, 3000);
         }
 
-        // When the form is submitted, store "subscribed" status and hide modal
-        form.addEventListener("submit", function () {
-            localStorage.setItem("subscribed", "true"); // Save subscription status
+        // When the form is submitted
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default submission for handling
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    localStorage.setItem("subscribed", "true"); // Save subscription status
+                    form.innerHTML = "<p style='color:white; font-size:18px;'>Thank you for submitting!</p>";
+
+                    setTimeout(() => {
+                        window.location.href = "/"; // Redirect to index page
+                    }, 2000); // 2-second delay before redirect
+                } else {
+                    form.innerHTML = "<p style='color:red;'>Oops! Something went wrong.</p>";
+                }
+            }).catch(error => {
+                form.innerHTML = "<p style='color:red;'>Oops! Something went wrong.</p>";
+            });
         });
     });
 </script>
-    
-    
     
     
 
